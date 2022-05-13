@@ -9,3 +9,8 @@
 [ ] Datum
 [ ] Text 
 [ ] Konvertierung
+
+## JOIN
+[ ]LEFT RIGHT INNER JOIN
+[ ] Join über mehrere Tabellen
+[ ] Diagramm
