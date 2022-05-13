@@ -17,7 +17,7 @@ select dateadd(qq,-5, getdate()) --- ein Select muss nicht wiederholt werden
 
 --Zeitspanne
 select datediff(mm,getdate(), '31.12.2022') -- 7 Monate
-select datediff(mm,'31.12.2022', getdate())  --  -7 MOnate
+select datediff(mm,'31.12.2022', getdate())  --  -7 Monate
 
 ------Blickrichtung ---
 
