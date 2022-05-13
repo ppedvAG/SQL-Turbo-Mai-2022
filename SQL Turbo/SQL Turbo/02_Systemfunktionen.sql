@@ -64,10 +64,28 @@ select '100'+ 'B'  --100B
 --Konvertieren
 select convert(varchar(50),100)+ 'B'
 
+--Längen feststellen:   LEN macht RTRIM DATALENGTH macht keinen TRIIM, sondern tats Länge
+select len('   abcdefgh            '), DATALENGTH('   abcdefgh    ')
+
 --08677-98890   --> 08677-98xxx
 --089-762372356723 --> 089-762372356XXX
-
 --bel Tel muss anonymisiert werden.. egal wie die Tel aussieht: am Ednde 3 X statt den letzten 3 Zeichen
+--Weg zur Lösung: 
+
+select STUFF('08677-944448890',DATALENGTH('08677-944448890')-2,3,'xxx'); --passt klappt
+
+select reverse(stuff( reverse('08677-944448890'),1,3, 'XXX'))
+
+--Der letzte Tag des Monats
+
+--theoretisch: 
+select EOMONTH(getdate())
+
+
+
+
+--12738973987123987129837: 25-2
+
 
 
 
